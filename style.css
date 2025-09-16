@@ -1,0 +1,33 @@
+:root{--bg:#000;--fg:#F2F2F2;--neon:#39FF14;--muted:#9aa0a6}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.nav{position:sticky;top:0;display:flex;align-items:center;padding:14px 22px;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);border-bottom:1px solid rgba(57,255,20,.15);z-index:50}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em}
+.logo-dot{width:12px;height:12px;border-radius:50%;background:var(--neon);box-shadow:0 0 16px var(--neon)}
+.brand-text{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.12em}
+.divider{width:10px;height:1px;background:rgba(255,255,255,.3);margin:0 8px 0 2px;display:inline-block}
+.brand-sub{opacity:.85}
+.hero.minimal{position:relative;padding:56px 24px 22px}
+.hero-content h1{font-family:'Bebas Neue',sans-serif;font-size:80px;letter-spacing:.06em;margin:0;line-height:.9;text-shadow:0 0 24px rgba(57,255,20,.25)}
+.hero-content p{margin:8px 0 0;color:var(--muted);font-weight:600;letter-spacing:.08em}
+.glow{position:absolute;left:-20%;right:-20%;bottom:-30%;height:220px;background:radial-gradient(50% 100% at 50% 0%,rgba(57,255,20,.35),rgba(0,0,0,0));filter:blur(40px);z-index:-1}
+.carousel-section{padding:24px 10px 70px}
+.carousel-wrapper{position:relative;max-width:1100px;margin:0 auto}
+.carousel{display:flex;gap:20px;scroll-snap-type:x mandatory;overflow-x:auto;padding:10px;scroll-behavior:smooth}
+.carousel::-webkit-scrollbar{height:8px}
+.carousel::-webkit-scrollbar-thumb{background:rgba(57,255,20,.3);border-radius:8px}
+.card{min-width:320px;max-width:560px;flex:0 0 80%;background:linear-gradient(180deg,#0a0a0a,#040404);border:1px solid rgba(57,255,20,.3);border-radius:18px;padding:22px;scroll-snap-align:center;box-shadow:0 0 24px rgba(57,255,20,.12)}
+.card h2{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:.04em;margin:0 0 10px}
+.card h3{margin:14px 0 6px;color:var(--neon);font-size:16px;text-transform:uppercase;letter-spacing:.12em}
+.card ul{margin:0 0 8px 18px;line-height:1.5}
+.card ul.compact li{margin-bottom:4px}
+.card .takeaway{margin-top:10px;padding:10px 12px;border:1px dashed rgba(57,255,20,.6);border-radius:12px;background:rgba(57,255,20,.06)}
+.card .note{opacity:.9}
+.nav-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(57,255,20,.5);color:var(--fg);width:44px;height:44px;border-radius:50%;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(3px)}
+.nav-btn:hover{border-color:var(--neon);box-shadow:0 0 12px rgba(57,255,20,.5)}
+.prev{left:-6px}.next{right:-6px}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25);border:1px solid rgba(57,255,20,.6)}
+.dot.active{background:var(--neon);box-shadow:0 0 10px var(--neon)}
+.footer{padding:26px 16px;text-align:center;color:#9aa0a6;border-top:1px solid rgba(57,255,20,.15)}
+@media(max-width:860px){.card{flex-basis:92%}.hero-content h1{font-size:60px}}
